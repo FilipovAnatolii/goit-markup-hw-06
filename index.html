@@ -24,7 +24,9 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
-          <a href="./index.html" class="header-logo">Web<span>Studio</span></a>
+          <a href="./index.html" class="logo header-logo"
+            >Web<span class="logo-part">Studio</span></a
+          >
           <ul class="header-menu-list">
             <li>
               <a href="./index.html" class="header-menu-link current">Studio</a>
@@ -47,6 +49,75 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-header-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-menu-close" data-menu-close>
+            <svg class="model-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav is-open">
+            <ul class="mobile-menu-list">
+              <li>
+                <a href="./index.html" class="mobile-menu-link current"
+                  >Studio</a
+                >
+              </li>
+              <li><a href="" class="mobile-menu-link">Portfolio</a></li>
+              <li><a href="" class="mobile-menu-link">Contacts</a></li>
+            </ul>
+          </nav>
+          <address class="mobile-address">
+            <ul class="mobile-menu-address">
+              <li>
+                <a href="tel:+110001111111" class="mobile-address-link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mobile-address-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-social-list">
+            <li class="mobile-social-item">
+              <a href="https://www.instagram.com/" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="https://x.com/" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twit"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="https://www.facebook.com/" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="https://ua.linkedin.com/" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -490,7 +561,7 @@
             </label>
             <button type="submit" class="footer-btn-subscribe">
               Subscribe
-              <svg class="footer-bnt-subscribe" width="24" height="20">
+              <svg class="footer-btn-icon-sub" width="24" height="24">
                 <use href="./images/icons.svg#icon-subscribe"></use>
               </svg>
             </button>
@@ -561,7 +632,7 @@
           <div class="modal-checkbox">
             <input
               type="checkbox"
-              name="user-privacy""
+              name="user-privacy"
               id="user-privacy"
               class="modal-check visually-hidden"
               value="true"
@@ -580,5 +651,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
