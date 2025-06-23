@@ -55,14 +55,14 @@
           </svg>
         </button>
       </div>
-      <div class="mobile-menu" data-menu>
+      <div class="mobile-menu is-open" data-menu>
         <div class="container mobile-menu-container">
           <button type="button" class="mobile-menu-close" data-menu-close>
             <svg class="model-close-icon" width="8" height="8">
               <use href="./images/icons.svg#icon-cross"></use>
             </svg>
           </button>
-          <nav class="mobile-menu-nav is-open">
+          <nav class="mobile-menu-nav">
             <ul class="mobile-menu-list">
               <li>
                 <a href="./index.html" class="mobile-menu-link current"
@@ -124,7 +124,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-btn">Order Service</button>
+          <button type="button" class="hero-btn" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="features">
@@ -188,6 +190,10 @@
           <ul class="team-item">
             <li class="team-item-list">
               <img
+                srcset="
+                  ./images/Mark_Guerrero.jpg    1x,
+                  ./images/Mark_Guerrero@2x.jpg 2x
+                "
                 src="./images/Mark_Guerrero.jpg"
                 alt="Mark_Guerrero"
                 width="264"
@@ -236,6 +242,7 @@
             </li>
             <li class="team-item-list">
               <img
+                srcset="./images/Tom_Ford.jpg 1x, ./images/Tom_Ford@2x.jpg 2x"
                 src="./images/Tom_Ford.jpg"
                 alt="Tom_Ford"
                 width="264"
@@ -284,6 +291,10 @@
             </li>
             <li class="team-item-list">
               <img
+                srcset="
+                  ./images/Camila_Garcia.jpg    1x,
+                  ./images/Camila_Garcia@2x.jpg 2x
+                "
                 src="./images/Camila_Garcia.jpg"
                 alt="Camila_Garcia"
                 width="264"
@@ -332,6 +343,10 @@
             </li>
             <li class="team-item-list">
               <img
+                srcset="
+                  ./images/Daniel_Wilson.jpg    1x,
+                  ./images/Daniel_Wilson@2x.jpg 2x
+                "
                 src="./images/Daniel_Wilson.jpg"
                 alt="Daniel_Wilson"
                 width="264"
@@ -389,6 +404,7 @@
             <li class="portfolio-item-list">
               <div class="tumba">
                 <img
+                  srcset="./images/portfolio_1.jpg 1x, ./images/portfolio_1@2x.jpg 2x"
                   src="./images/portfolio_1.jpg"
                   alt="portfolio-1-logo"
                   width="360"
@@ -408,6 +424,7 @@
             <li class="portfolio-item-list">
               <div class="tumba">
                 <img
+                  srcset="./images/portfolio_2.jpg 1x, ./images/portfolio_2@2x.jpg 2x"
                   src="./images/portfolio_2.jpg"
                   alt="portfolio-2-logo"
                   width="360"
@@ -427,6 +444,7 @@
             <li class="portfolio-item-list">
               <div class="tumba">
                 <img
+                  srcset="./images/portfolio_3.jpg 1x, ./images/portfolio_3@2x.jpg 2x"
                   src="./images/portfolio_3.jpg"
                   alt="portfolio-3-logo"
                   width="360"
@@ -446,6 +464,7 @@
             <li class="portfolio-item-list">
               <div class="tumba">
                 <img
+                srcset="./images/portfolio_4.jpg 1x, ./images/portfolio_4@2x.jpg 2x"
                   src="./images/portfolio_4.jpg"
                   alt="portfolio-4-logo"
                   width="360"
@@ -465,6 +484,7 @@
             <li class="portfolio-item-list">
               <div class="tumba">
                 <img
+                srcset="./images/portfolio_5.jpg 1x, ./images/portfolio_5@2x.jpg 2x"
                   src="./images/portfolio_5.jpg"
                   alt="portfolio-5-logo"
                   width="360"
@@ -484,6 +504,7 @@
             <li class="portfolio-item-list">
               <div class="tumba">
                 <img
+                srcset="./images/portfolio_6.jpg 1x, ./images/portfolio_6@2x.jpg 2x"
                   src="./images/portfolio_6.jpg"
                   alt="portfolio-6-logo"
                   width="360"
@@ -569,9 +590,9 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" class="model-close">
+        <button type="button" class="model-close" data-modal-close>
           <svg class="model-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
@@ -643,8 +664,10 @@
                   <use
                     href="./images/icons.svg#icon-checkbox"
                   ></use></svg></span
-              >I accept the terms and conditions of the
-              <a class="modal-policy" href="">Privacy Policy</a></label
+              ><span
+                >I accept the terms and conditions of the
+                <a class="modal-policy" href="">Privacy Policy</a></span
+              ></label
             >
           </div>
           <button type="submit" class="modal-button-send">Send</button>
